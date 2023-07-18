@@ -1,15 +1,15 @@
 import React from 'react'
 
-function Password({onChange}) {
+function Username({onChange}) {
     return (
         <form className='inputs' onChange={onChange}>
             <input
             type="text"
             className='website'
-            // placeholder='Password'
+            // placeholder='Username/email'
             />    
         </form>
       )
 }
 
-export default Password
+export default Username

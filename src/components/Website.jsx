@@ -6,7 +6,7 @@ function Website({onChange}) {
             <input
             type="text"
             className='website'
-            placeholder='Website'
+            // placeholder='Website Name'
             />    
         </form>
       )

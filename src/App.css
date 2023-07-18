@@ -1,5 +1,100 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 50px;
+  background-color: rgb(249, 243, 238);
+}
+
+h2 {
+  margin: 0 0 20px 15px;
+}
+/* .App {
   text-align: center;
+} */
+#label {
+  margin: 0 0 5px 5px;
+}
+
+#title {
+  /* border: solid blue; */
+  margin-bottom: 30px;
+  font-size: 55px;
+}
+
+#mainWrapper {
+  /* border: solid lime; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputBox {
+  border: 1px solid #edeaea;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  width: 400px;
+  /* padding: 10px; */
+  padding: 30px 50px;
+}
+.inputs {
+  margin-bottom: 20px;
+}
+
+input {
+  height: 35px;
+  width: 300px;
+  font-size: 20px;
+  padding-left: 15px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+.btn {
+  width: 300px;
+  height: 35px;
+  font-size: 20px;
+}
+
+.data {
+  display: flex;
+  justify-content: center;
+}
+
+.dataValues {
+  /* border: solid crimson; */
+  /* background-color: lightblue; */
+  border: 1px solid lightgray;
+  background-color: #f5f5f5;
+  width: 570px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+.submittedValues {
+  /* border: solid green; */
+  background-color: beige;
+  width: 570px;
+  height: 55px;
+  padding: 30px 0 15px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 0 0 8px 8px;
+  /* position: relative; */
+  margin-left: -610px;
+  margin-top: 50px;
+}
+.deleteBtn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  /* margin-top: -210px; */
 }
 
 .field {
