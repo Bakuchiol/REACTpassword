@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Website() {
+function Website({onChange}) {
     return (
-        <form className='inputs'>
+        <form className='inputs' onChange={onChange}>
             <input
             type="text"
             className='website'

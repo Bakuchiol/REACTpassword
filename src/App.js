@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Website from './components/Website';
 import Password from './components/Password';
-import Button from './components/Button';
+// import Button from './components/Button';
 import Database from './components/Database';
 // import Inputs from './components/Inputs';
 // import Form from './components/Form';
@@ -17,7 +17,8 @@ function App() {
 
   const storeData = () => {
     setData([...data, {website, password}])
-    console.log(data)
+    console.log(website)
+    console.log(password)
   }
 
 
@@ -36,7 +37,12 @@ function App() {
       onChange={(e) => setPassword(e.target.value)}
       />
 
-      <Button onClick={storeData}/>
+      {/* <Button onClick={() => storeData()}/> */}
+      <button
+      type='submit'
+      className='btn'
+      onClick={() => storeData()}
+      >Submit</button>
 
       <div className='data'>
         <div className='dataValues'>
@@ -49,7 +55,7 @@ function App() {
       {
         data.map((element, idx) => {
           return (
-            <Database name={element.website} email={element.password} index={idx}/>
+            <Database key={idx} name={element.website} email={element.password} index={idx}/>
           )
         })
       } index
