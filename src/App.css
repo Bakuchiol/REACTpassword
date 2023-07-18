@@ -7,7 +7,18 @@ body {
   padding: 50px;
   background-color: rgb(249, 243, 238);
 }
-
+.topWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.topWrapper > p {
+  margin-top: 20px;
+}
+.topWrapper > p > span{
+  font-size: 20px;
+  font-weight: 500;
+  color: crimson;
+}
 h2 {
   margin: 0 0 20px 15px;
 }
@@ -54,12 +65,16 @@ input {
   width: 300px;
   height: 35px;
   font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(26, 118, 248);
+  color: whitesmoke;
 }
 
-.data {
+/* .data {
   display: flex;
   justify-content: center;
-}
+} */
 
 .dataValues {
   /* border: solid crimson; */
@@ -86,7 +101,6 @@ input {
   align-items: center;
   font-size: 25px;
   border-radius: 0 0 8px 8px;
-  /* position: relative; */
   margin-left: -610px;
   margin-top: 50px;
 }
@@ -97,10 +111,17 @@ input {
   /* margin-top: -210px; */
 }
 
+#notification {
+  display: none;
+}
+
+
+/* ********** */
 .field {
   display: flex;
 }
 
 fieldset {
   border: none;
+  color:rgb(222, 173, 83);
 }

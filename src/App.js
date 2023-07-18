@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Website from './components/Website';
 import Password from './components/Password';
@@ -16,6 +16,19 @@ function App() {
   const [password, setPassword] = useState('');
   const [username, setUserName] = useState('');
   const [data, setData] = useState([]);
+
+  // for useEffect
+  // const [count, setCount] = useState(0)
+  const [color, setColor] = useState('rgb(26, 118, 248)')
+  const [accolor, setAcColor] = useState('#f5f5f5')
+
+  const changeColor = () => {
+    setColor('rgb(222, 173, 83)')
+    changeAcc()
+  }
+  const changeAcc = () => {
+    setAcColor('lightblue')
+  }
 
   const storeData = () => {
     // if empty alert
@@ -38,15 +51,10 @@ function App() {
     setWebsite('');
     setPassword('');
     setUserName('');
+
+    // changeCount();
+    changeColor()
   }
-
-  // try remove (removes all)
-  // const remove = (idx) => {
-  //   const arr = data.filter(item => item.idx !== idx);
-  //   setData(arr);
-  // }
-
-
 
   // test remove 2
     const remove = (index) => {
@@ -55,10 +63,40 @@ function App() {
     setData([...array]);
   }
 
+  // test effect
+  // useEffect (() => {
+  //   // setCount(count + 1)
+  //   setWebsite(website[count])
+  // }, [website, count])
+
+  // const changeCount = () => {
+  //   setCount(count + 1)
+  // }
+
+  // useEffect (() => {
+  //   // setCount(count + 1) // infinite loop
+  //   console.log('saved accounts', count)
+  // }, [count])
+
+  useEffect (() => {
+    console.log('New Account')
+    // let notif = document.querySelector('#notification')
+    // notif.style.display = "block"
+    let btn = document.querySelector('.btn')
+    btn.style.backgroundColor = color
+    let account = document.querySelector('.dataValues')
+    account.style.backgroundColor = accolor
+  })
+  
+
   return (
     <div className="App">
       <h1 id="title">Password Manager</h1>
-      <h2>👋🏼 Hello, Customer</h2>
+      <div className='topWrapper'>
+        <h2>👋🏼 Hello, Customer</h2>
+        <p id='notification'>You added a new account!</p>
+        {/* <p>You have <span>{count}</span> accounts saved.</p> */}
+      </div>
       {/* <Inputs /> */}
       {/* <Form /> */}
       <div id='mainWrapper'>
